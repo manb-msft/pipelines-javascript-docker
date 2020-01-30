@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: manbmsftpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: manbmsftpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: manbmsftpipelinesjavascriptdocker 
+          image: manbacr281.azurecr.io/manbmsftpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
